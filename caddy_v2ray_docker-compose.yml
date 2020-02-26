@@ -24,6 +24,8 @@ services:
       usemysql: 0
       CF_Key: "bbbbbbbbbbbbbbbbbb"
       CF_Email: "v2rayV3@test.com"
+      MUREGEX: "%5m%id.%suffix"
+      MUSUFFIX: "microsoft.com"
     volumes:
       - /etc/localtime:/etc/localtime:ro
     logging:
@@ -32,13 +34,13 @@ services:
         max-file: "3"
 
   caddy:
-    image: uuddss/v2:caddy
+    image: uuddss/v2:caddy_new
     restart: always
     environment:
       - ACME_AGREE=true
-#      if u want to use cloudflare (for DNS challenge authentication)
-#      - CLOUDFLARE_EMAIL=xxxxxx@out.look.com
-#      - CLOUDFLARE_API_KEY=xxxxxxx
+      #      if u want to use cloudflare (for DNS challenge authentication)
+      #      - CLOUDFLARE_EMAIL=xxxxxx@out.look.com
+      #      - CLOUDFLARE_API_KEY=xxxxxxx
       - V2RAY_DOMAIN=xxxx.com
       - V2RAY_PATH=/v2ray
       - V2RAY_EMAIL=xxxx@outlook.com
