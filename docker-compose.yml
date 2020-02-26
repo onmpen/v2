@@ -23,6 +23,8 @@ services:
       usemysql: 0
       CF_Key: "bbbbbbbbbbbbbbbbbb"
       CF_Email: "v2rayV3@test.com"
+      MUREGEX: "%5m%id.%suffix"
+      MUSUFFIX: "microsoft.com"
     volumes:
       - /etc/localtime:/etc/localtime:ro
     logging:
