@@ -2,7 +2,7 @@ version: '2'
 
 services:
   v2ray:
-    image: uuddss/v2:go_pay
+    image: uuddss/v2:4.22.1.5
     restart: always
     network_mode: "host"
     environment:
