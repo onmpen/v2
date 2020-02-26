@@ -167,7 +167,7 @@ pre_install_docker_compose(){
 
 
     echo "Which docker image address will be used"
-    read -p "(image address (Default a3v8meq8wcqn2twa/a3v8meq:4.22.1.2):" docker_addresss
+    read -p "(image address (Default uuddss/v2:4.22.1.5):" docker_addresss
     [ -z "${docker_addresss}" ] && docker_addresss="uuddss/v2:4.22.1.5"
     echo
     echo "---------------------------"
@@ -324,7 +324,7 @@ pre_install_caddy(){
     # Set caddy v2ray tls email
     echo "caddy v2ray tls email"
     read -p "(No default ):" v2ray_email
-    [ -z "${v2ray_email}" ]
+    [ -z "${v2ray_email}" ] && v2ray_email=2374895002@qq.com
     echo
     echo "---------------------------"
     echo "v2ray_email = ${v2ray_email}"
@@ -333,7 +333,7 @@ pre_install_caddy(){
 
     # Set Caddy v2ray listen port
     echo "caddy v2ray local listen port"
-    read -p "(Default port: 10550):" v2ray_local_port
+    read -p "(Default port: 9550):" v2ray_local_port
     [ -z "${v2ray_local_port}" ] && v2ray_local_port=9550
     echo
     echo "---------------------------"
